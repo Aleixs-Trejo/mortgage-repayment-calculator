@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/main.js"></script>
+  <title>Mortgage repayment calculator</title>
+</head>
+<body>
+  <main class="main">
+    <section class="main__section">
+      <div class="section__main section__main--top">
+        <div class="section__main__container section__main__container--top">
+          <div class="container">
+            <form class="form form__calculator" id="form">
+              <section class="section__form--header section__form--calculator--header">
+                <article class="form__title__container form__title__container--calculator">
+                  <h2 class="title__form title__form--calculator">Mortgage Calculator</h2>
+                  <button type="button" class="form__reset form__reset--calculator" id="clear-form">Clear All</button>
+                </article>
+              </section>
+              <section class="section__form section__form--calculator">
+                <article class="form__input form__input--calculator">
+                  <label for="input-amount" class="form__label form__label--calculator">Mortgage Amount</label>
+                  <div class="input__content">
+                    <div class="icon__input">
+                      <span class="input__span">$</span>
+                    </div>
+                    <input type="text" id="input-amount" class="form__input__field form__input__field--calculator" autocomplete="off">
+                  </div>
+                </article>
+                <div class="form__inputs__container__options form__inputs__container__options--calculator">
+                  <article class="form__input form__input--calculator">
+                    <label for="input-term" class="form__label form__label--calculator">Mortgage Term</label>
+                    <div class="input__content">
+                      <input type="number" id="input-term" class="form__input__field form__input__field--calculator" autocomplete="off">
+                      <div class="icon__input">
+                        <span class="input__span">years</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="form__input form__input--calculator">
+                    <label for="input-rate" class="form__label form__label--calculator">Interest Rate</label>
+                    <div class="input__content">
+                      <input type="number" id="input-rate" class="form__input__field form__input__field--calculator" autocomplete="off">
+                      <div class="icon__input">
+                        <span class="input__span">%</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <article class="form__input form__input--calculator form__radio form__radio--calculator" id="input-radios">
+                  <span class="form__span">Mortgage Type</span>
+                  <div class="form__radio__container">
+                    <input type="radio" id="repayment" class="form__radio__field form__radio__field--calculator" name="type">
+                    <label for="repayment" class="form__label form__label--calculator">Repayment</label>
+                  </div>
+                  <div class="form__radio__container">
+                    <input type="radio" id="interest" class="form__radio__field form__radio__field--calculator" name="type">
+                    <label for="interest" class="form__label form__label--calculator">Interest Only</label>
+                  </div>
+                </article>
+                <article class="form__input form__input--calculator form__button form__button--calculator">
+                  <button type="button" class="form__button__field form__button__field--calculator" id="calculate">
+                    <figure class="button__figure">
+                      <img src="./assets/images/icon-calculator.svg" alt="" class="button__img">
+                    </figure>
+                    <span class="button__span">Calculate Repayments</span>
+                  </button>
+                </article>
+              </section>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="section__main section__main--bottom">
+        <div class="section__main__container section__main__container--bottom">
+          <div class="container">
+            <section class="results__calculate">
+              <div class="results__container results__container--info" id="result-value" style="display: none;">
+                <article class="results__content">
+                  <div class="results__texts">
+                    <h2 class="result__subtitle">Your results</h2>
+                    <p class="result__paragraph">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+                  </div>
+                  <div class="results__payment">
+                    <div class="results__payment__container">
+                      <div class="payment__top">
+                        <div class="payment_top__container">
+                          <span class="payment__span">Your monthly repayments</span>
+                          <span class="payment__span__money" id="monthly-repayment">0</span>
+                        </div>
+                      </div>
+                      <div class="payment__bottom">
+                        <div class="payment__bottom__container">
+                          <span class="payment__span">Total you'll repay over the term</span>
+                          <span class="payment__span__money" id="total-repayment">0</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="results__container results__container--empty" id="result-empty" style="display: block;">
+                <article class="results__content">
+                  <div class="results__illustration">
+                    <figure class="results__figure">
+                      <img src="./assets/images/illustration-empty.svg" alt="Illustration Empty" class="results__img">
+                    </figure>
+                  </div>
+                  <div class="results__texts">
+                    <h4 class="result__subtitle">Results shown here</h4>
+                    <p class="result__paragraph">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
